@@ -1,63 +1,75 @@
 {
-    "users":[
+  "users": [
+    {
+      "id": 1,
+      "firstName": "David Santiago",
+      "lastName": "Vesga Fajardo",
+      "email": "dvesga@gmail.com",
+      "password": "qwerty123"
+    },
+    {
+      "id": 2,
+      "firstName": "Tatiana Lizbeth",
+      "lastName": "Cabrera Vargas",
+      "email": "dvesga@gmail.com",
+      "password": "qwerty123"
+    },
+    {
+      "firstName": "Jennifer",
+      "lastName": "Fajardo",
+      "id": "123456789",
+      "email": "jafajardo83@misena.edu.co",
+      "password": "123456"
+    }
+  ],
+  "pqrs": [
+    {
+      "id": 1,
+      "type": "Peticion",
+      "description": "Petición de Cambio de Modem",
+      "date": "",
+      "areas": [
         {
-            "id":1,
-            "firstName":"David Santiago",
-            "lastName":"Vesga Fajardo",
-            "email":"dvesga@gmail.com",
-            "password":"qwerty123"
+          "name": "Tecnología"
         },
         {
-            "id":2,
-            "firstName":"Tatiana Lizbeth",
-            "lastName":"Cabrera Vargas",
-            "email":"dvesga@gmail.com",
-            "password":"qwerty123"
+          "name": "Soporte Técnico"
         }
-    ],
-    "pqrs":[
+      ],
+      "state": "Pendiente",
+      "funcionary": [
         {
-            "id":1,
-            "type": "Peticion",
-            "description":"Petición de Cambio de Modem",
-            "date":"",
-            "areas":[
-                {"name":"Tecnología"},
-                {"name":"Soporte Técnico"}
-                
-            ],
-            "state":"Pendiente",
-            "funcionary":[
-                {"name":"Manuel Pelaez"},
-                {"name":"Tatiana Cabrera"}
-                
-            ],
-            "userId": 2
+          "name": "Manuel Pelaez"
         },
         {
-            "id":2,
-            "type": "Queja",
-            "description":"Mal Servicio de Salud",
-            "date":"",
-            "areas":[
-                {"name":"Administrativo"},
-                {"name":"Citas Médicas"}
-                
-            ],
-            "state":"Pendiente",
-            "funcionary":[
-                {"name":"Sandra Rodriguez"},
-                {"name":"Isaac Fisgativa"}
-                
-            ],
-            "userId": 1
+          "name": "Tatiana Cabrera"
         }
-        
-        
-    ]
-    
+      ],
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "type": "Queja",
+      "description": "Mal Servicio de Salud",
+      "date": "",
+      "areas": [
+        {
+          "name": "Administrativo"
+        },
+        {
+          "name": "Citas Médicas"
+        }
+      ],
+      "state": "Pendiente",
+      "funcionary": [
+        {
+          "name": "Sandra Rodriguez"
+        },
+        {
+          "name": "Isaac Fisgativa"
+        }
+      ],
+      "userId": 1
+    }
+  ]
 }
-
-
-
-
