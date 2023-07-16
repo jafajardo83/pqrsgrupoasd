@@ -27,7 +27,7 @@
       "id": 1,
       "type": "Peticion",
       "description": "Petición de Cambio de Modem",
-      "date": "",
+      "date": "2023-07-14T20:42:43.535Z",
       "areas": [
         {
           "name": "Tecnología"
@@ -37,7 +37,7 @@
         }
       ],
       "state": "Pendiente",
-      "funcionary": [
+      "officer": [
         {
           "name": "Manuel Pelaez"
         },
@@ -61,7 +61,7 @@
         }
       ],
       "state": "Pendiente",
-      "funcionary": [
+      "officer": [
         {
           "name": "Sandra Rodriguez"
         },

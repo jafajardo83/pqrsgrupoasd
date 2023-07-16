@@ -1,11 +1,11 @@
 import axios from 'axios';
 import {useEffect, useState} from 'react';
 import {Container,Row} from 'react-bootstrap';
-import CardEstudiantes from './CardEstudiantes';
+import CardPqrs from './CardPqrs';
 function ListPqrs() {
 
     /*1. Definir url del api a la que me voy a conectar */
-    const url="https://hoteliakuepa.herokuapp.com/reservas";
+    const url="http://localhost:5000/pqrs";
 
     /*2. Generar función asíncrona para conectarme al API */
     const getData=async()=>{
@@ -24,15 +24,15 @@ function ListPqrs() {
             setList(response.data);
         })
     },[upList])
-    console.log(list);
+    //console.log(list);
     return(
         <Container>
             <Row>
                 {
                     list.map((es,index)=>(
-                        <CardEstudiantes
+                        <CardPqrs
                         key={index}
-                        estudiante={es}
+                        pqrs={es}
                         setUplist={setUplist}
                         upList={upList}
                         />

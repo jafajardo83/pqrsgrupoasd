@@ -1,7 +1,7 @@
 import { Card, Button } from 'react-bootstrap';
 
 import {Link} from 'react-router-dom';
-import './ListUser.css';
+import './User.css';
 
 function CardUser({ user }) {
 
