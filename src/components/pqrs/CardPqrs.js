@@ -5,7 +5,8 @@ import './Pqrs.css';
 
 function CardPqrs({ pqrs }) {
 
-    
+     
+   
     return (
         
         

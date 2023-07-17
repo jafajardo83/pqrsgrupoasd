@@ -36,7 +36,6 @@
           "name": "Soporte Técnico"
         }
       ],
-      "state": "Pendiente",
       "officer": [
         {
           "name": "Manuel Pelaez"
@@ -45,6 +44,7 @@
           "name": "Tatiana Cabrera"
         }
       ],
+      "state": "Pendiente",
       "userId": 2
     },
     {
@@ -60,7 +60,6 @@
           "name": "Citas Médicas"
         }
       ],
-      "state": "Pendiente",
       "officer": [
         {
           "name": "Sandra Rodriguez"
@@ -69,7 +68,30 @@
           "name": "Isaac Fisgativa"
         }
       ],
+      "state": "Pendiente",
       "userId": 1
+    },
+    {
+      "0": {
+        "area": "Tecnología"
+      },
+      "1": {
+        "area": "Soporte Técnico"
+      },
+      "id": "a8ffe089c93249eeac74acd0f37a1d7d",
+      "type": "Queja",
+      "description": "dhsuhfuia",
+      "date": "2023-07-17T04:52:38.698Z",
+      "state": "Pendiente",
+      "userId": "",
+      "areas": [
+        {
+          "area": "Tecnología"
+        },
+        {
+          "area": "Soporte Técnico"
+        }
+      ]
     }
   ]
 }

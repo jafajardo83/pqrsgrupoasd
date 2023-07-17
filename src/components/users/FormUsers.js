@@ -11,7 +11,7 @@ function FormUsers(){
     
     /*1.Inicializamos los inputs en el estado, para poder recibir los valores que se digiten 
     en él y controlarlos */
-    const [data,setData]=useState({firstName:"",lastName:"",id:"",email:"",password:""});
+    const [data,setData]=useState({id:"",firstName:"",lastName:"",email:"",password:""});
     /*2. Se usa la función handleChange para que cada vez que haya un cambio en el input
     guarde el name y el value del mismo */
     const handleChange=({target})=>{
