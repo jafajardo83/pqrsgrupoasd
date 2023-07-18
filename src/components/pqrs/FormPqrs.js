@@ -20,41 +20,54 @@ function FormPqrs(){
     
     /*1.Inicializamos los inputs en el estado, para poder recibir los valores que se digiten 
     en él y controlarlos */
+
     const [areas,setInputAreas]=useState([])
     const [inputArea,setInputArea]=useState({area:""})
+    const [officers,setInputOfficers]=useState([])
+    const [inputOfficer,setInputOfficer]=useState({officer:""})
+
     function changeHandle(e){
         e.preventDefault();
         setInputArea({
             ...inputArea,
-            [e.target.name]:e.target.value
-            
+            [e.target.name]:e.target.value  
+        })        
+    }
+    
+    function changeFHandle(e){
+        e.preventDefault();
+        setInputOfficer({
+            ...inputOfficer,
+            [e.target.name]:e.target.value  
         })
-        
     }
     
     let{area}=inputArea
+    let{officer}=inputOfficer
 
     function changHandle(){
-        setInputAreas([...areas,{area}])
-        
-        
+        setInputAreas([...areas,{area}])        
     }
-    console.log(areas)
+    //console.log(areas)
+    
+    function changFHandle(){
+        setInputOfficers([...officers,{officer}])
+    }
+    //console.log(officers)
+
 
     const [data,setData]=useState({id:generateUUID(),type:"",description:"",date:new Date(),state:"Pendiente",userId:""});
     /*2. Se usa la función handleChange para que cada vez que haya un cambio en el input
     guarde el name y el value del mismo */
-           
-    
         const handleChange=({target})=>{
         //Cada vez que haya un cambio se va a guardar el valor en el estado data
         setData({
             ...data,
             [target.name]:target.value,
-            ...data.areas,
-            areas
-            
-            
+            ...data.area,
+            areas,
+            ...data.officer,
+            officers
         })
     }
    
@@ -116,20 +129,53 @@ function FormPqrs(){
                 <option value="Soporte Técnico">Soporte Técnico</option>
                 <option value="Financiero">Financiero</option>
             </Form.Select>
-            {<button className="btn btn-primary" type="button" onClick={changHandle}>agregar Área</button>}
+            <button className="btn btn-primary" type="button" onClick={changHandle}>agregar Área</button>
+            <table border={1} cellPadding={10}>
+                <tr>
+                    <td>Area</td>
+                </tr>
+                {
+                    areas.map(
+                        (info,ind)=>{
+                            return(
+                                <tr>
+                                    <td>{info.area}</td>
+                                </tr>
+                            )
+                        }
+                    )
+                }
+            </table>
             </Form.Group>
 
             <Form.Group className="mb-3">
             <Form.Label>Funcionario(s)</Form.Label>
             <Form.Select 
             name="officer"
-            onChange={handleChange}>
+            onChange={changeFHandle}>
                 <option>Seleccione un funcionario para dirigir su solicitid</option>
                 <option value="Sandra Rodriguez">Sandra Rodriguez</option>
                 <option value="Isaac Fisgativa">Isaac Fisgativa</option>
                 <option value="Manuel Pelaez">Manuel Pelaez</option>
                 <option value="Tatiana Cabrera">Tatiana Cabrera</option>
             </Form.Select>
+            <button className="btn btn-primary" type="button" onClick={changFHandle}>agregar Funcionario</button>
+            <table border={1} cellPadding={10}>
+                <tr>
+                    <td>Funcionario</td>
+                </tr>
+                {
+                    officers.map(
+                        (info,ind)=>{
+                            return(
+                                <tr>
+                                    <td>{info.officer}</td>
+                                </tr>
+                            )
+                        }
+                    )
+                }
+            </table>
             </Form.Group>
             
             <Form.Group className="mb-3">

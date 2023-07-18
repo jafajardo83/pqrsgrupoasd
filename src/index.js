@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './index.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Inicio from './pages/Inicio';
 import Pqrs from './pages/Pqrs';
 import Users from './pages/Users';

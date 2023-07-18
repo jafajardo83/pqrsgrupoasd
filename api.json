@@ -30,18 +30,18 @@
       "date": "2023-07-14T20:42:43.535Z",
       "areas": [
         {
-          "name": "Tecnología"
+          "area": "Tecnología"
         },
         {
-          "name": "Soporte Técnico"
+          "area": "Soporte Técnico"
         }
       ],
-      "officer": [
+      "officers": [
         {
-          "name": "Manuel Pelaez"
+          "officer": "Manuel Pelaez"
         },
         {
-          "name": "Tatiana Cabrera"
+          "officer": "Tatiana Cabrera"
         }
       ],
       "state": "Pendiente",
@@ -54,34 +54,28 @@
       "date": "",
       "areas": [
         {
-          "name": "Administrativo"
+          "area": "Administrativo"
         },
         {
-          "name": "Citas Médicas"
+          "area": "Citas Médicas"
         }
       ],
-      "officer": [
+      "officers": [
         {
-          "name": "Sandra Rodriguez"
+          "officer": "Sandra Rodriguez"
         },
         {
-          "name": "Isaac Fisgativa"
+          "officer": "Isaac Fisgativa"
         }
       ],
       "state": "Pendiente",
       "userId": 1
     },
     {
-      "0": {
-        "area": "Tecnología"
-      },
-      "1": {
-        "area": "Soporte Técnico"
-      },
-      "id": "a8ffe089c93249eeac74acd0f37a1d7d",
-      "type": "Queja",
-      "description": "dhsuhfuia",
-      "date": "2023-07-17T04:52:38.698Z",
+      "id": "7f8fd7b713544c769de7d1214715859b",
+      "type": "Reclamo",
+      "description": "drytvghbjn",
+      "date": "2023-07-18T02:41:41.309Z",
       "state": "Pendiente",
       "userId": "",
       "areas": [
@@ -90,6 +84,14 @@
         },
         {
           "area": "Soporte Técnico"
+        }
+      ],
+      "officers": [
+        {
+          "officer": "Sandra Rodriguez"
+        },
+        {
+          "officer": "Isaac Fisgativa"
         }
       ]
     }
