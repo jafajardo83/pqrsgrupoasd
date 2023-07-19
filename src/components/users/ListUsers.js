@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import CardUser from "./CardUser.js"
 import NavBar from "../navBar/NavBar.js";
 
+
 function ListUser() {
 
     /* 1. Definir url del API a la que me voy a conectar */

@@ -1,0 +1,58 @@
+#form-pqrs{
+    margin: 1rem auto;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #eaeaea;
+    padding: 1rem 1rem;
+}
+
+.table-pqrs{
+    border-collapse: collapse; 
+    font-size: 1em;
+    margin: 0.5rem 0; 
+    width: 100%;
+    box-shadow: 0px 0px 5px #eaeaea;
+}
+.table-pqrs th{
+    background-color: var(--azuloscuro);
+    padding: 0.5rem;
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+.table-pqrs td{
+    background-color: var(--gris);
+    padding: 0.3rem;
+    color: var(--blanco);
+    font-weight: 400;
+}
+
+#list-pqrs{
+    margin: 1rem;
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+.list-pqrs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.card-pqrs{
+    padding: 1rem 1rem;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #eaeaea;
+    color: var(--negro);
+    font-size: 1rem;
+    max-width: 380px;
+    max-height: 450px;
+    height: 450px;
+    margin-bottom: 1.5rem;
+}
+.card-pars-title{
+    color: var(--azulnegro);
+}
+

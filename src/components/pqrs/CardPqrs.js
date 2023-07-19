@@ -24,9 +24,9 @@ function CardPqrs({ pqrs,setUpList,upList,handleClose,handleOpen,setDataModal })
     return (
         
         
-            <Card  style={{ width: '100%' }} key={pqrs.id} className="">
+            <Card  style={{ width: '100%' }} key={pqrs.id} className="card-pqrs">
                 
-                <Card.Title className="">PQRS No. {pqrs.id}</Card.Title>
+                <Card.Title className="card-pars-title">PQRS No. <br/>{pqrs.id}</Card.Title>
                 
                 <Card.Body>    
                     <Card.Text>
@@ -39,9 +39,11 @@ function CardPqrs({ pqrs,setUpList,upList,handleClose,handleOpen,setDataModal })
                         
                         
                     </Card.Text>
-                    <div className="">
-                        <button className="btn btn-warning me-2" onClick={handleEdit}>Editar</button>
-                        <Link to="/ver-pqrs" ><Button variant="primary" className="">Ver PQRS</Button></Link>
+                    <div className="text-center">
+                        <button className="button-blue" onClick={handleEdit}>Editar</button>
+                        <Link to="/ver-pqrs" >
+                            <button className="button-gray">Ver PQRS</button>
+                        </Link>
                     </div>
                 </Card.Body> 
             </Card> 

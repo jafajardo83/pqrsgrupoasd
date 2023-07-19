@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import {useEffect, useState} from 'react';
 import {Container,Row,Form,Modal} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import CardPqrs from './CardPqrs';
+import NavBar from '../navBar/NavBar';
 function ListPqrs() {
 
     /*1. Definir url del api a la que me voy a conectar */
@@ -67,8 +69,20 @@ function ListPqrs() {
     },[upList])
     //console.log(list);
     return(
+        <>
+        <NavBar/>
         <Container>
-            <Row>
+        <div id="list-pqrs">
+        <div className="title-user mt-5 mb-5">
+                <h2>Peticiones Quejas Reclamos y Solicitudes</h2>
+                <Link to="/register/pqrs" className="menu-item">
+                    <button className="button-blue">
+                        <i className="fa-solid fa-user"></i> Registrar PQRS
+                    </button>
+                </Link>  
+            </div>
+            <div className="list-pqrs">
+                
                 {
                     list.map((es,index)=>(
                         <CardPqrs
@@ -83,7 +97,7 @@ function ListPqrs() {
                     ))   
                 }
                 
-            </Row>
+            </div>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -164,7 +178,9 @@ function ListPqrs() {
                 </Modal.Footer>
                 </Form>
             </Modal>
+            </div>
         </Container>
+        </>
     );
 }
 

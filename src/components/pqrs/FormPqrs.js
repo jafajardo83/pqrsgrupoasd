@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Container, Form, Row, Col } from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
+import NavBar from "../navBar/NavBar";
+import './Pqrs.css';
 
 function FormPqrs(){
 
@@ -101,8 +103,10 @@ function FormPqrs(){
 
         
     return(
-        <div>
+        <>
+        <NavBar/>
         <Container>
+        <div id="form-pqrs">
         <h1 className="text-center mt-3">Datos PQRS</h1>
         <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
@@ -119,37 +123,46 @@ function FormPqrs(){
             </Form.Select>
             </Form.Group>
 
+            <Row>
+            <Col>
             <Form.Group className="mb-3">
+            
             <Form.Label>Areas</Form.Label>
+            <div className="d-flex flex-row">
             <Form.Select 
             name="area"
-            onChange={changeHandle}>
-                <option>Seleccione un área para dirigir su solicitid</option>
+            onChange={changeHandle} >
+                <option>Seleccione un área para dirigir su solicitud</option>
                 <option value="Tecnología">Tecnología</option>
                 <option value="Soporte Técnico">Soporte Técnico</option>
                 <option value="Financiero">Financiero</option>
             </Form.Select>
-            <button className="btn btn-primary" type="button" onClick={changHandle}>agregar Área</button>
-            <table border={1} cellPadding={10}>
-                <tr>
-                    <td>Area</td>
-                </tr>
-                {
-                    areas.map(
-                        (info,ind)=>{
-                            return(
-                                <tr>
-                                    <td>{info.area}</td>
-                                </tr>
-                            )
-                        }
-                    )
-                }
-            </table>
+            <button className="button-gray" type="button" onClick={changHandle}>Agregar</button>
+            </div>
+            <div>
+                <table className="table-pqrs">
+                    <tr>
+                        <th>Areas seleccionadas</th>
+                    </tr>
+                    {
+                        areas.map(
+                            (info,ind)=>{
+                                return(
+                                    <tr>
+                                        <td>{info.area}</td>
+                                    </tr>
+                                )
+                            }
+                        )
+                    }
+                </table>
+            </div>
             </Form.Group>
-
+            </Col>
+            <Col>
             <Form.Group className="mb-3">
             <Form.Label>Funcionario(s)</Form.Label>
+            <div className="d-flex flex-row">
             <Form.Select 
             name="officer"
             onChange={changeFHandle}>
@@ -159,10 +172,12 @@ function FormPqrs(){
                 <option value="Manuel Pelaez">Manuel Pelaez</option>
                 <option value="Tatiana Cabrera">Tatiana Cabrera</option>
             </Form.Select>
-            <button className="btn btn-primary" type="button" onClick={changFHandle}>agregar Funcionario</button>
-            <table border={1} cellPadding={10}>
+            <button className="button-gray" type="button" onClick={changFHandle}>Agregar</button>
+            </div>
+            <div>
+            <table className="table-pqrs">
                 <tr>
-                    <td>Funcionario</td>
+                    <th>Funcionario</th>
                 </tr>
                 {
                     officers.map(
@@ -176,8 +191,10 @@ function FormPqrs(){
                     )
                 }
             </table>
+            </div>
             </Form.Group>
-            
+            </Col>
+            </Row>
             <Form.Group className="mb-3">
                 <Form.Label>Descripción</Form.Label>
                 <Form.Control 
@@ -189,10 +206,12 @@ function FormPqrs(){
                 onChange={handleChange}/> 
             </Form.Group>
             
-            <button className="btn btn-primary" type="submit">Radicar PQRS</button>
+            <button className="button-blue text-center" type="submit">Radicar PQRS</button>
         </Form>
-        </Container>
         </div>
+        </Container>
+        
+        </>
     );
 }
 export default FormPqrs;

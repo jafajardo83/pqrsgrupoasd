@@ -4,6 +4,7 @@ import { Container, Form } from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
 import NavBar from "../navBar/NavBar";
+import './User.css';
 
 function FormUsers(){
 
