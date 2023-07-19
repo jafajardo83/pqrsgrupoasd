@@ -7,6 +7,11 @@
     padding: 1rem 1rem;
 }
 
+.req{
+    color: var(--azuloscuro);
+    font-weight: 600;
+}
+
 #list-user{
     margin: 1rem;
     width: 100%;

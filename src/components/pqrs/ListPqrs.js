@@ -71,9 +71,9 @@ function ListPqrs() {
     return(
         <>
         <NavBar/>
-        <Container>
+        <Container fluid>
         <div id="list-pqrs">
-        <div className="title-user mt-5 mb-5">
+        <div className="title-user">
                 <h2>Peticiones Quejas Reclamos y Solicitudes</h2>
                 <Link to="/register/pqrs" className="menu-item">
                     <button className="button-blue">

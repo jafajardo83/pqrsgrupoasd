@@ -60,7 +60,7 @@ function FormUsers(){
         <Form onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3">
-                <Form.Label>No. Documento</Form.Label>
+                <Form.Label>No. Documento <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="number" 
                 placeholder="Ingrese su número de documento"
@@ -71,7 +71,7 @@ function FormUsers(){
             </Form.Group>
             
             <Form.Group className="mb-3">
-                <Form.Label>Nombre</Form.Label>
+                <Form.Label>Nombre <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="text" 
                 placeholder="Ingrese su nombre"
@@ -81,7 +81,7 @@ function FormUsers(){
             </Form.Group>
             
             <Form.Group className="mb-3">
-                <Form.Label>Apellido</Form.Label>
+                <Form.Label>Apellido <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="text" 
                 placeholder="Ingrese su apellido"
@@ -91,7 +91,7 @@ function FormUsers(){
             </Form.Group>
     
             <Form.Group className="mb-3">
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="email" 
                 placeholder="Ingrese su email"
@@ -101,7 +101,7 @@ function FormUsers(){
             </Form.Group>
            
             <Form.Group className="mb-3">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Password <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="password" 
                 placeholder="Ingrese su password"
@@ -109,8 +109,9 @@ function FormUsers(){
                 value={data.password}
                 onChange={handleChange}/> 
             </Form.Group>
-
+            <div className="text-center">
             <button className="button-blue">Guardar</button>
+            </div>
         </Form>
         </div>
         </Container>

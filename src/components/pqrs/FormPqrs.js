@@ -110,7 +110,7 @@ function FormPqrs(){
         <h1 className="text-center mt-3">Datos PQRS</h1>
         <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
-            <Form.Label>Tipo de PQRS</Form.Label>
+            <Form.Label>Tipo de PQRS <span className="req">*</span></Form.Label>
             <Form.Select 
             name="type"
             onChange={handleChange}>
@@ -127,7 +127,7 @@ function FormPqrs(){
             <Col>
             <Form.Group className="mb-3">
             
-            <Form.Label>Areas</Form.Label>
+            <Form.Label>Área(s) <span className="req">*</span></Form.Label>
             <div className="d-flex flex-row">
             <Form.Select 
             name="area"
@@ -142,7 +142,7 @@ function FormPqrs(){
             <div>
                 <table className="table-pqrs">
                     <tr>
-                        <th>Areas seleccionadas</th>
+                        <th>Áreas seleccionadas</th>
                     </tr>
                     {
                         areas.map(
@@ -161,7 +161,7 @@ function FormPqrs(){
             </Col>
             <Col>
             <Form.Group className="mb-3">
-            <Form.Label>Funcionario(s)</Form.Label>
+            <Form.Label>Funcionario(s) <span className="req">*</span></Form.Label>
             <div className="d-flex flex-row">
             <Form.Select 
             name="officer"
@@ -177,7 +177,7 @@ function FormPqrs(){
             <div>
             <table className="table-pqrs">
                 <tr>
-                    <th>Funcionario</th>
+                    <th>Funcionarios seleccionados</th>
                 </tr>
                 {
                     officers.map(
@@ -196,7 +196,7 @@ function FormPqrs(){
             </Col>
             </Row>
             <Form.Group className="mb-3">
-                <Form.Label>Descripción</Form.Label>
+                <Form.Label>Descripción <span className="req">*</span></Form.Label>
                 <Form.Control 
                 as="textarea" 
                 rows={3}
@@ -205,8 +205,10 @@ function FormPqrs(){
                 value={data.description}
                 onChange={handleChange}/> 
             </Form.Group>
+            <div className="text-center">
+                <button className="button-blue" type="submit">Radicar PQRS</button>
+            </div>
             
-            <button className="button-blue text-center" type="submit">Radicar PQRS</button>
         </Form>
         </div>
         </Container>

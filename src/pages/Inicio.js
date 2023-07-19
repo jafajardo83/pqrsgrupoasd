@@ -4,12 +4,15 @@ import Peticion from '../util/home/peticiones.png'
 import Queja from '../util/home/queja.png'
 import Reclamo from '../util/home/reclamo.png'
 import Solicitud from '../util/home/solicitud.png'
+import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 function Inicio() {
     return (
         <>
 
             <NavBar />
-            <div className="container-fluid">
+            <Container fluid/>
                 <section id='info-pqrs'>
                     <div className='info-title'>
                         <h1>Te escuchamos</h1>
@@ -30,12 +33,16 @@ function Inicio() {
                                     <p>Radicación de requerimientos sobre un producto o la prestación de un servicio.</p>
                                 </div>
                                 <div className="box-buttons">
-                                <button className="button-blue">
-                                <i className="fa-solid fa-magnifying-glass"></i> Consultar
-                                </button>
+                                <Link to="/login">
+                                    <button className="button-blue">
+                                    <i className="fa-solid fa-magnifying-glass"></i> Consultar
+                                    </button>
+                                </Link>
+                                <Link to="/login">
                                 <button className="button-gray">
                                 <i className="fa-solid fa-plus"></i> Registrar 
                                 </button>
+                                </Link>
                                 </div>
                             </div>
 
@@ -50,12 +57,16 @@ function Inicio() {
                                     <p>Manifestación de inconformidad hacía la conducta en la atención por parte de un colaborador.</p>
                                 </div>
                                 <div className="box-buttons">
-                                <button className="button-blue">
-                                <i className="fa-solid fa-magnifying-glass"></i> Consultar
-                                </button>
+                                <Link to="/login">
+                                    <button className="button-blue">
+                                    <i className="fa-solid fa-magnifying-glass"></i> Consultar
+                                    </button>
+                                </Link>
+                                <Link to="/login">
                                 <button className="button-gray">
                                 <i className="fa-solid fa-plus"></i> Registrar 
                                 </button>
+                                </Link>
                                 </div>
                             </div>
                             <div className="box-pqrs">
@@ -70,12 +81,16 @@ function Inicio() {
                                     </p>
                                 </div>
                                 <div className="box-buttons">
-                                <button className="button-blue">
-                                <i className="fa-solid fa-magnifying-glass"></i> Consultar
-                                </button>
+                                <Link to="/login">
+                                    <button className="button-blue">
+                                    <i className="fa-solid fa-magnifying-glass"></i> Consultar
+                                    </button>
+                                </Link>
+                                <Link to="/login">
                                 <button className="button-gray">
                                 <i className="fa-solid fa-plus"></i> Registrar 
                                 </button>
+                                </Link>
                                 </div>
                             </div>
                             <div className="box-pqrs">
@@ -89,12 +104,16 @@ function Inicio() {
                                     <p>Propuesta o recomendación del cliente para mejorar el servicio de la empresa.</p>
                                 </div>
                                 <div className="box-buttons">
+                                <Link to="/login">
                                     <button className="button-blue">
                                     <i className="fa-solid fa-magnifying-glass"></i> Consultar
                                     </button>
-                                    <button className="button-gray">
-                                    <i className="fa-solid fa-plus"></i> Registrar 
-                                    </button>
+                                </Link>
+                                <Link to="/login">
+                                <button className="button-gray">
+                                <i className="fa-solid fa-plus"></i> Registrar 
+                                </button>
+                                </Link>
                                 </div>
                             </div>
                         </section>
@@ -102,7 +121,7 @@ function Inicio() {
 
                 </section>
 
-            </div>
+            <Container/>
         </>
     );
 }

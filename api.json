@@ -20,20 +20,6 @@
       "id": "123456789",
       "email": "jafajardo83@misena.edu.co",
       "password": "123456"
-    },
-    {
-      "id": "1234567899",
-      "firstName": "Jennifer",
-      "lastName": "Fajardo",
-      "email": "jafajardo83@misena.edu.co",
-      "password": "qwerty"
-    },
-    {
-      "id": "987654321",
-      "firstName": "Tatiana",
-      "lastName": "Cabrera",
-      "email": "tcabrera@gmail.com",
-      "password": "asdfg"
     }
   ],
   "pqrs": [
@@ -65,7 +51,7 @@
       "id": 2,
       "type": "Queja",
       "description": "Mal Servicio de Salud",
-      "date": "",
+      "date": "2023-07-12T20:42:43.535Z",
       "areas": [
         {
           "area": "Administrativo"
@@ -86,10 +72,10 @@
       "userId": 1
     },
     {
-      "id": "7f8fd7b713544c769de7d1214715859b",
-      "type": "Reclamo",
-      "description": "drytvghbjn",
-      "date": "2023-07-18T02:41:41.309Z",
+      "id": "d1f5ece262874ae8aecd28e12293b66f",
+      "type": "Petición",
+      "description": "No se realizó el pago de la cuenta de cobro en el tiempo establecido",
+      "date": "2023-07-19T14:26:04.978Z",
       "state": "Pendiente",
       "userId": "",
       "areas": [
@@ -97,15 +83,12 @@
           "area": "Tecnología"
         },
         {
-          "area": "Soporte Técnico"
+          "area": "Financiero"
         }
       ],
       "officers": [
         {
           "officer": "Sandra Rodriguez"
-        },
-        {
-          "officer": "Isaac Fisgativa"
         }
       ]
     }

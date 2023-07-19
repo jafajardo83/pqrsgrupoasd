@@ -2,10 +2,12 @@ import './NavBar.css'
 import Logo from '../../util/logo.svg'
 
 import { Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 function NavBar(){
     return(
         <>
+        <Container fluid/>
         <header>
             <div className="logo">
             <Link to="/home" className='menu-item'>
@@ -25,7 +27,7 @@ function NavBar(){
                 </Link>  
             </nav>
         </header>
-            
+        <Container />
         </>
     )
 }

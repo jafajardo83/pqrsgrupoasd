@@ -31,18 +31,6 @@ h1,h2,h3,h4,h5{
       font-family: 'Montserrat', sans-serif;
 }
 
-#container-grid{
-    display: grid;
-    grid-template:
-    "nav" auto
-    "banner" 400px
-    "descripcion" auto
-    "feature" auto
-    "ubicacion" auto
-    "opinion" auto
-    "footer" auto;
-}
-
 .button-blue{
   background-color: var(--azuloscuro);
   color: var(--blanco);
