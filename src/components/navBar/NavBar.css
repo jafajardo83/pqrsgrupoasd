@@ -11,12 +11,12 @@
 
 .logo i{
     color: var(--blanco);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .logo img{
     max-width: 250px;
-    width: 50%;
+    width: 100%;
 }
 
 nav{
@@ -86,7 +86,7 @@ nav a:hover{
         display: none;
     } 
     .logo img{
-        width: 80%;
+        width: 85%;
     }
     .menu-hr{
         display: none;        

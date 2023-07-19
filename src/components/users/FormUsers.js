@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
+import NavBar from "../navBar/NavBar";
 
 function FormUsers(){
 
@@ -27,7 +28,7 @@ function FormUsers(){
 
     /*3. funci{on para procesar el envío del formulario*/
         const handleSubmit=async(e)=>{
-            e.preventDefault();
+            //e.preventDefault();
             const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
             console.log(response);
             if (response.status === 201) {
@@ -38,6 +39,7 @@ function FormUsers(){
                     'success'
                 )
                 //history.push("/");
+            
                 
             }else {
                 Swal.fire(
@@ -48,8 +50,11 @@ function FormUsers(){
             }
         }
     return(
-        <div>
+        
+        <>
+        <NavBar/>
         <Container>
+        <div id="form-user">
         <h1 className="text-center mt-3">Datos Usuario</h1>
         <Form onSubmit={handleSubmit}>
 
@@ -78,7 +83,7 @@ function FormUsers(){
                 <Form.Label>Apellido</Form.Label>
                 <Form.Control 
                 type="text" 
-                placeholder="Ingrese su lastName"
+                placeholder="Ingrese su apellido"
                 name="lastName" 
                 value={data.lastName}
                 onChange={handleChange}/> 
@@ -103,13 +108,12 @@ function FormUsers(){
                 value={data.password}
                 onChange={handleChange}/> 
             </Form.Group>
-           
-            
-            
-            <button className="btn btn-primary">Guardar</button>
+
+            <button className="button-blue">Guardar</button>
         </Form>
-        </Container>
         </div>
+        </Container>
+        </>
     );
 }
 export default FormUsers;

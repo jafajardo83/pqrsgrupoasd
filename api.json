@@ -20,6 +20,20 @@
       "id": "123456789",
       "email": "jafajardo83@misena.edu.co",
       "password": "123456"
+    },
+    {
+      "id": "1234567899",
+      "firstName": "Jennifer",
+      "lastName": "Fajardo",
+      "email": "jafajardo83@misena.edu.co",
+      "password": "qwerty"
+    },
+    {
+      "id": "987654321",
+      "firstName": "Tatiana",
+      "lastName": "Cabrera",
+      "email": "tcabrera@gmail.com",
+      "password": "asdfg"
     }
   ],
   "pqrs": [

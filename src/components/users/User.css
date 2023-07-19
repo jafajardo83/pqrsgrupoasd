@@ -1,157 +1,27 @@
-.list-user{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.list-user__card{
-    text-align: center;
-    margin: 15px;
-    padding: 10px;
-    min-width: 250px; 
-}
-
-.list-user__card:hover{
-    transform: translateY(-3px);
-    transition-duration: 200ms;
-    box-shadow: 2px 2px 3px #1770f638;
-}
-
-.list-user__cardTitle{
-    background-color: #009fe370;
-    padding: 8px;
-    color:white;
+#form-user{
+    margin: 1rem auto;
+    max-width: 600px;
     width: 100%;
-    margin-top: -40px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px #eaeaea;
+    padding: 1rem 1rem;
 }
 
-.list-user__cardPrice{
-    font-family: 'Marcellus', serif;
-    font-size: 30px;
-    font-weight: 600;
+#list-user{
+    margin: 1rem;
+    width: 100%;
+    padding: 1rem 1rem;
 }
- 
-.list-user__buttons{
+
+.list-users{
     display: flex;
     justify-content: space-between;
-    font-family: 'Marcellus', serif;
-}
-
-.list-user__cardButtonPrincipal{
-    background-color: black;
-    width: 100%;
-    margin-right: 10px;
-    font-size: 18px;
-}
-
-.list-user__cardButtonSecondary{
-    background-color: var(--Magenta);
-    width: 100%;
-    margin-left: 10px;
-    font-size: 18px;
-}
-
-.list-user__card Button{
-    border: none;
-}
-
-
-
-.list-user__filters{
-    display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    background-color: #F1F1F1;
-    padding: 10px;
-    margin: 20px 0;
+
 }
 
-.list-user__select-group{
-    margin: 10px auto;
-    min-width: 250px;
-}
-
-.list-user__select-group select{
-    width: 200px;
-    height: 30px;
-    border: transparent;
+.card-user{
     border-radius: 3px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.20);
-}
-
-.list-user__label{
-    margin-right: 20px;
-    font-weight: 600;
-}
-
-@media screen and (min-width:768px) {
-    .list-user{
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .list-user__card{
-        text-align: center;
-        padding: 10px;
-    }
-    
-    .list-user__cardTitle{
-        background-color: #009fe370;
-        padding: 8px;
-        color:white;
-        width: 100%;
-        margin-top: -40px;
-    }
-    
-    .list-user__cardPrice{
-        font-family: 'Marcellus', serif;
-        font-size: 30px;
-        font-weight: 600;
-    }
-     
-    .list-user__buttons{
-        display: flex;
-        justify-content: space-between;
-        font-family: 'Marcellus', serif;
-    }
-    
-    .list-user__cardButtonPrincipal{
-        background-color: black;
-        width: 100%;
-        margin-right: 10px;
-        font-size: 18px;
-    }
-    
-    .list-user__cardButtonSecondary{
-        background-color: var(--Magenta);
-        width: 100%;
-        margin-left: 10px;
-        font-size: 18px;
-    }
-    
-    .list-user__card Button{
-        border: none;
-    }
-        
-    .list-user__filters{
-        display: flex;
-        justify-content: center;
-        background-color: #F1F1F1;
-        padding: 10px;
-        margin: 20px 0;
-    }
-    
-    
-    .list-user__select-group select{
-        width: 200px;
-        height: 30px;
-        border: transparent;
-        border-radius: 3px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.20);
-    }
-    
-    .list-user__label{
-        margin-right: 20px;
-        font-weight: 600;
-    }
+    box-shadow: 0px 0px 5px #eaeaea;
 }

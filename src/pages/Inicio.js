@@ -30,10 +30,10 @@ function Inicio() {
                                     <p>Radicación de requerimientos sobre un producto o la prestación de un servicio.</p>
                                 </div>
                                 <div className="box-buttons">
-                                <button className="box-pqrs-button-gray">
+                                <button className="button-blue">
                                 <i className="fa-solid fa-magnifying-glass"></i> Consultar
                                 </button>
-                                <button className="box-pqrs-button">
+                                <button className="button-gray">
                                 <i className="fa-solid fa-plus"></i> Registrar 
                                 </button>
                                 </div>
@@ -50,10 +50,10 @@ function Inicio() {
                                     <p>Manifestación de inconformidad hacía la conducta en la atención por parte de un colaborador.</p>
                                 </div>
                                 <div className="box-buttons">
-                                <button className="box-pqrs-button-gray">
+                                <button className="button-blue">
                                 <i className="fa-solid fa-magnifying-glass"></i> Consultar
                                 </button>
-                                <button className="box-pqrs-button">
+                                <button className="button-gray">
                                 <i className="fa-solid fa-plus"></i> Registrar 
                                 </button>
                                 </div>
@@ -70,10 +70,10 @@ function Inicio() {
                                     </p>
                                 </div>
                                 <div className="box-buttons">
-                                <button className="box-pqrs-button-gray">
+                                <button className="button-blue">
                                 <i className="fa-solid fa-magnifying-glass"></i> Consultar
                                 </button>
-                                <button className="box-pqrs-button">
+                                <button className="button-gray">
                                 <i className="fa-solid fa-plus"></i> Registrar 
                                 </button>
                                 </div>
@@ -89,10 +89,10 @@ function Inicio() {
                                     <p>Propuesta o recomendación del cliente para mejorar el servicio de la empresa.</p>
                                 </div>
                                 <div className="box-buttons">
-                                    <button className="box-pqrs-button-gray">
+                                    <button className="button-blue">
                                     <i className="fa-solid fa-magnifying-glass"></i> Consultar
                                     </button>
-                                    <button className="box-pqrs-button">
+                                    <button className="button-gray">
                                     <i className="fa-solid fa-plus"></i> Registrar 
                                     </button>
                                 </div>

@@ -14,12 +14,13 @@ root.render(
 <BrowserRouter>
   <Routes>
     <Route path="/" element={<Inicio/>}></Route>
+    <Route path="/home" element={<Inicio/>}></Route>
     <Route path="/users" element={<Users />}></Route>
     <Route path="/register-user" element={<FormUsers/>}></Route>
     {/*<Route path="/login" element={<Login />}></Route>*/}
   
-    <Route path='/pqrs' element={<Pqrs/>}></Route>
-    <Route path='/register/pqrs' element={<FormPqrs/>}></Route>
+    <Route path="/pqrs" element={<Pqrs/>}></Route>
+    <Route path="/register/pqrs" element={<FormPqrs/>}></Route>
   </Routes>
 </BrowserRouter>
 );

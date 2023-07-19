@@ -8,10 +8,14 @@ function NavBar(){
         <>
         <header>
             <div className="logo">
-                <img src={Logo}/>
+            <Link to="/home" className='menu-item'>
+                <img src={Logo} alt='Logo Sistema PQRS'/>
+            </Link> 
                 <i className="fa-solid fa-bars"></i>
             </div>
+            
             <nav>
+                <Link to="/home" className='menu-item'> Home </Link> 
                 <Link to="/register-user" className="menu-item" >Regístrate</Link>
                 <hr className="menu-hr" noshade=""/>
                 <Link to="/login" className="menu-item">

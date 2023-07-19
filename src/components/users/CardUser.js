@@ -8,7 +8,7 @@ function CardUser({ user }) {
     return (
         
         
-            <Card  style={{ width: '20rem' }} key={user.id} className="">
+            <Card  style={{ width: '20rem' }} key={user.id} className="card-user">
                 
                 <Card.Title className="">Usuario No. {user.id}</Card.Title>
                 

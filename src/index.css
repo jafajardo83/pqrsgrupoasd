@@ -42,3 +42,24 @@ h1,h2,h3,h4,h5{
     "opinion" auto
     "footer" auto;
 }
+
+.button-blue{
+  background-color: var(--azuloscuro);
+  color: var(--blanco);
+  padding: 0.5rem 1rem ;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.button-gray{
+  background-color: var(--azulnegro);
+  color: var(--blanco);
+  padding: 0.5rem 1rem ;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem;
+}

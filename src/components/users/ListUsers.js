@@ -1,9 +1,10 @@
 //import dobleroom from '../../img/doble-room.jpg';
 import { Link } from "react-router-dom";
-import {Button} from "react-bootstrap";
+import {Button, Container} from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CardUser from "./CardUser.js"
+import NavBar from "../navBar/NavBar.js";
 
 function ListUser() {
 
@@ -28,14 +29,18 @@ function ListUser() {
     //console.log([list]);
     return (
         <>
+        <NavBar/>
+        <Container>
+        <div id="list-user">
             <div className='title-user mt-5 mb-5'>
                 <h2>Usuarios</h2>
+                <Link to="/register-user" className="menu-item">
+                    <button className="button-blue">
+                        <i className="fa-solid fa-user"></i> Registrar Usuario
+                    </button>
+                </Link>  
             </div>
-            <div className="">
-                        <Link to="/register-user" ><Button className="">Registrar Usuario</Button></Link>
-            </div>
-            <div className='list-users'>
-
+            <div className="list-users">
                 {
                 list.map((es, index) => (
                     <CardUser
@@ -47,6 +52,8 @@ function ListUser() {
                 ))
                 }
             </div>
+            </div>
+        </Container>
         </>
     );
 }
