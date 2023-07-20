@@ -70,7 +70,7 @@
       "description": "qwerty",
       "date": "2023-07-20T15:48:25.607Z",
       "state": "Pendiente",
-      "userId": "",
+      "userId": 1,
       "areas": [
         {
           "area": "Tecnología"
@@ -88,7 +88,7 @@
       "description": "qwerty",
       "date": "2023-07-20T15:50:06.054Z",
       "state": "Pendiente",
-      "userId": "",
+      "userId": 2,
       "areas": [
         {
           "area": "Tecnología"

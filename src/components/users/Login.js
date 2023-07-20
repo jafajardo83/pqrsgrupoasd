@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Form,Row,Col } from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
@@ -11,6 +11,9 @@ import logo from "../../util/logo.svg";
 
 function Login() {
 
+    useEffect(()=>{
+        sessionStorage.clear()
+    },[]);
     /*5. Constante history para retornar al listado*/
     
     
@@ -52,12 +55,14 @@ function Login() {
                 else{
                     console.log(response.data[0].password)
                     if(response.data[0].password===data.password){
-                       
                         Swal.fire(
                             'Bienvenido!',
-                            `<strong> ${response.data.firstName} ${response.data.lastName}</strong>`,
+                            `<strong> ${response.data[0].firstName} ${response.data[0].lastName}</strong>`,
                             'success'
                         )
+                        sessionStorage.setItem('id',response.data[0].id)
+                        sessionStorage.setItem('firstName',response.data[0].firstName)
+                        sessionStorage.setItem('lastName',response.data[0].lastName)
                        navigate('/dashboard'); 
                     }
                     else{

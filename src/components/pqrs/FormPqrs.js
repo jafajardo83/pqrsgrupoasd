@@ -6,9 +6,19 @@ import Swal from 'sweetalert2'
 import NavBarUser from "../navBar/NavBarUser";
 import './Pqrs.css';
 import { useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 function FormPqrs(){
 
+    useEffect(()=>{
+        let id=sessionStorage.getItem('id')
+        let firstName=sessionStorage.getItem('firstName')
+        let lastName=sessionStorage.getItem('lastName')
+        //console.log("el id es"+id+" el nombre "+firstName+" el apellido es "+lastName)
+        if(id===''||id===null){
+            setTimeout(() => window.location.href="/login", 50);
+
+        }
+    },[])
     function generateUUID() {
         var d = new Date().getTime();
         var uuid = 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function (c) {

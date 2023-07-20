@@ -8,7 +8,7 @@ import NavBarUser from '../navBar/NavBarUser';
 function ListPqrs() {
 
     /*1. Definir url del api a la que me voy a conectar */
-    const url="http://localhost:5000/pqrs";
+    const url="http://localhost:5000/pqrs?userId="+sessionStorage.getItem('id');
 
     /*2. Generar función asíncrona para conectarme al API */
     const getData=async()=>{
