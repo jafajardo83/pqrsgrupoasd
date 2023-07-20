@@ -16,7 +16,7 @@ function Login() {
     
     /*1.Inicializamos los inputs en el estado, para poder recibir los valores que se digiten 
     en él y controlarlos */
-    const [data,setData]=useState({id:"",firstName:"",lastName:"",email:"",password:""});
+    const [data,setData]=useState({email:"",password:""});
     /*2. Se usa la función handleChange para que cada vez que haya un cambio en el input
     guarde el name y el value del mismo */
     const handleChange=({target})=>{
@@ -28,7 +28,7 @@ function Login() {
     }
 
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/users";  
+    const url="http://localhost:5000/users?email="+data.email;  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
@@ -40,26 +40,35 @@ function Login() {
             }
             else{
                 e.preventDefault();
-                const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
+                const response=await axios.get(url,data);//await espera hasta que se ejcute la petición
                 console.log(response);
-                if (response.status === 201) {
-                    
-                    Swal.fire(
-                        'Guardado!',
-                        `El usuario <strong> ${response.data.firstName} ${response.data.lastName}</strong> ha sido guardado exitosamente!<br>
-                        Ahora podrás iniciar sesión`,
-                        'success'
-                    )
-                    navigate('/login');
-                
-                    
-                }else {
+                if(Object.keys==0){
                     Swal.fire(
                         'Error!',
-                        'Hubo un problema al registrar el usuario!',
-                        'error'
+                        `El usuario no se encuentra registrado`,
+                        'erros'
                     )
                 }
+                else{
+                    console.log(response.data[0].password)
+                    if(response.data[0].password===data.password){
+                       
+                        Swal.fire(
+                            'Bienvenido!',
+                            `<strong> ${response.data.firstName} ${response.data.lastName}</strong>`,
+                            'success'
+                        )
+                       navigate('/dashboard'); 
+                    }
+                    else{
+                        Swal.fire(
+                            'Error!',
+                            'Sus credenciales de acceso no son válidas!',
+                            'error'
+                        )
+                    }
+                }
+                
             }
             setValidated(true);
         }

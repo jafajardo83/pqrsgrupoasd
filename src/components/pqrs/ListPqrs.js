@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import {Container,Row,Form,Modal} from 'react-bootstrap';
 import Swal from 'sweetalert2';
 import CardPqrs from './CardPqrs';
-import NavBar from '../navBar/NavBar';
+import NavBarUser from '../navBar/NavBarUser';
 function ListPqrs() {
 
     /*1. Definir url del api a la que me voy a conectar */
@@ -70,7 +70,7 @@ function ListPqrs() {
     //console.log(list);
     return(
         <>
-        <NavBar/>
+        <NavBarUser/>
         <Container fluid>
         <div id="list-pqrs">
         <div className="title-user">

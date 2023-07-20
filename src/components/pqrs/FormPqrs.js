@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Container, Form, Row, Col } from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
-import NavBar from "../navBar/NavBar";
+import NavBarUser from "../navBar/NavBarUser";
 import './Pqrs.css';
 import { useNavigate } from "react-router-dom";
 
@@ -121,7 +121,7 @@ function FormPqrs(){
         
     return(
         <>
-        <NavBar/>
+        <NavBarUser/>
         <Container>
         <div id="form-pqrs">
         <h1 className="text-center mt-3">Datos PQRS</h1>

@@ -11,29 +11,8 @@
       "id": 2,
       "firstName": "Tatiana Lizbeth",
       "lastName": "Cabrera Vargas",
-      "email": "dvesga@gmail.com",
+      "email": "tatacabrera@gmail.com",
       "password": "qwerty123"
-    },
-    {
-      "firstName": "Jennifer",
-      "lastName": "Fajardo",
-      "id": "123456789",
-      "email": "jafajardo83@misena.edu.co",
-      "password": "123456"
-    },
-    {
-      "id": "789415263",
-      "firstName": "Jennifer",
-      "lastName": "Cabrera",
-      "email": "tutorias.ctf@kuepa.edu.co",
-      "password": "qwerty789"
-    },
-    {
-      "id": "7894561230",
-      "firstName": "Jennifer",
-      "lastName": "Fajardo",
-      "email": "lrodriguez@gmail.com",
-      "password": "qwerty"
     }
   ],
   "pqrs": [
