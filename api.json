@@ -20,6 +20,13 @@
       "id": "123456789",
       "email": "jafajardo83@misena.edu.co",
       "password": "123456"
+    },
+    {
+      "id": "789415263",
+      "firstName": "Jennifer",
+      "lastName": "Cabrera",
+      "email": "tutorias.ctf@kuepa.edu.co",
+      "password": "qwerty789"
     }
   ],
   "pqrs": [
@@ -72,18 +79,33 @@
       "userId": 1
     },
     {
-      "id": "d1f5ece262874ae8aecd28e12293b66f",
+      "id": "f21474a2e9774000b999212dfdd7f5d2",
       "type": "Petición",
-      "description": "No se realizó el pago de la cuenta de cobro en el tiempo establecido",
-      "date": "2023-07-19T14:26:04.978Z",
+      "description": "qwerty",
+      "date": "2023-07-20T06:59:36.348Z",
       "state": "Pendiente",
       "userId": "",
       "areas": [
         {
           "area": "Tecnología"
-        },
+        }
+      ],
+      "officers": [
         {
-          "area": "Financiero"
+          "officer": "Sandra Rodriguez"
+        }
+      ]
+    },
+    {
+      "id": "d30b28cf3e914cd8a53edaf4734afd0a",
+      "type": "Petición",
+      "description": "qwerty",
+      "date": "2023-07-20T15:03:29.350Z",
+      "state": "Pendiente",
+      "userId": "",
+      "areas": [
+        {
+          "area": "Tecnología"
         }
       ],
       "officers": [

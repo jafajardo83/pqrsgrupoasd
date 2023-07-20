@@ -5,11 +5,12 @@ import { Container, Form } from "react-bootstrap";
 import Swal from 'sweetalert2'
 import NavBar from "../navBar/NavBar";
 import './User.css';
+import { useNavigate } from "react-router-dom";
 
 function FormUsers(){
 
     /*5. Constante history para retornar al listado*/
-    //const history=useHistory();
+    
     
     /*1.Inicializamos los inputs en el estado, para poder recibir los valores que se digiten 
     en él y controlarlos */
@@ -26,10 +27,10 @@ function FormUsers(){
 
     /*4. Crear petición asíncrona*/
     const url="http://localhost:5000/users";  
-
+    const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
         const handleSubmit=async(e)=>{
-            //e.preventDefault();
+            e.preventDefault();
             const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
             console.log(response);
             if (response.status === 201) {
@@ -39,7 +40,7 @@ function FormUsers(){
                     `El usuario <strong> ${response.data.firstName} ${response.data.lastName}</strong> ha sido guardado exitosamente!`,
                     'success'
                 )
-                //history.push("/");
+                navigate('/login');
             
                 
             }else {

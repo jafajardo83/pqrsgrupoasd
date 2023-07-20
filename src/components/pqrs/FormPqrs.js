@@ -5,6 +5,7 @@ import { Container, Form, Row, Col } from "react-bootstrap";
 import Swal from 'sweetalert2'
 import NavBar from "../navBar/NavBar";
 import './Pqrs.css';
+import { useNavigate } from "react-router-dom";
 
 function FormPqrs(){
 
@@ -73,7 +74,7 @@ function FormPqrs(){
         })
     }
    
-
+    const navigate=useNavigate();
     /*4. Crear petición asíncrona*/
     const url="http://localhost:5000/pqrs";  
 
@@ -89,7 +90,7 @@ function FormPqrs(){
                     `<strong> ${response.data.type} No. ${response.data.id}</strong> ha sido guardado exitosamente!`,
                     'success'
                 )
-                //history.push("/");
+                navigate('/pqrs')
                 
             }else {
                 Swal.fire(

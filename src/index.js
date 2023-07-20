@@ -8,6 +8,7 @@ import Pqrs from './pages/Pqrs';
 import Users from './pages/Users';
 import FormUsers from './components/users/FormUsers';
 import FormPqrs from './components/pqrs/FormPqrs';
+import Login from './components/users/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,10 +16,11 @@ root.render(
   <Routes>
     <Route path="/" element={<Inicio/>}></Route>
     <Route path="/home" element={<Inicio/>}></Route>
+    
+    <Route path="/login" element={<Login/>}></Route>
     <Route path="/users" element={<Users />}></Route>
     <Route path="/register-user" element={<FormUsers/>}></Route>
-    {/*<Route path="/login" element={<Login />}></Route>*/}
-  
+      
     <Route path="/pqrs" element={<Pqrs/>}></Route>
     <Route path="/register/pqrs" element={<FormPqrs/>}></Route>
   </Routes>
