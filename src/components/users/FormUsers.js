@@ -27,29 +27,39 @@ function FormUsers(){
 
     /*4. Crear petición asíncrona*/
     const url="http://localhost:5000/users";  
+    const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
         const handleSubmit=async(e)=>{
-            e.preventDefault();
-            const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
-            console.log(response);
-            if (response.status === 201) {
-                
-                Swal.fire(
-                    'Guardado!',
-                    `El usuario <strong> ${response.data.firstName} ${response.data.lastName}</strong> ha sido guardado exitosamente!`,
-                    'success'
-                )
-                navigate('/login');
-            
-                
-            }else {
-                Swal.fire(
-                    'Error!',
-                    'Hubo un problema al registrar el usuario!',
-                    'error'
-                )
+            const form = e.currentTarget;
+            if (form.checkValidity() === false) {
+                e.preventDefault();
+                e.stopPropagation();
             }
+            else{
+                e.preventDefault();
+                const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
+                console.log(response);
+                if (response.status === 201) {
+                    
+                    Swal.fire(
+                        'Guardado!',
+                        `El usuario <strong> ${response.data.firstName} ${response.data.lastName}</strong> ha sido guardado exitosamente!<br>
+                        Ahora podrás iniciar sesión`,
+                        'success'
+                    )
+                    navigate('/login');
+                
+                    
+                }else {
+                    Swal.fire(
+                        'Error!',
+                        'Hubo un problema al registrar el usuario!',
+                        'error'
+                    )
+                }
+            }
+            setValidated(true);
         }
     return(
         
@@ -58,57 +68,76 @@ function FormUsers(){
         <Container>
         <div id="form-user">
         <h1 className="text-center mt-3">Datos Usuario</h1>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} noValidate validated={validated}>
 
             <Form.Group className="mb-3">
                 <Form.Label>No. Documento <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="number" 
+                required
                 placeholder="Ingrese su número de documento"
                 name="id" 
                 value={data.id}
-                
                 onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el número de documento.
+                </Form.Control.Feedback>
             </Form.Group>
             
             <Form.Group className="mb-3">
                 <Form.Label>Nombre <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="text" 
+                required
                 placeholder="Ingrese su nombre"
                 name="firstName" 
                 value={data.firstName}
                 onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el nombre.
+                </Form.Control.Feedback>
             </Form.Group>
             
             <Form.Group className="mb-3">
                 <Form.Label>Apellido <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="text" 
+                required
                 placeholder="Ingrese su apellido"
                 name="lastName" 
                 value={data.lastName}
                 onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el apellido.
+                </Form.Control.Feedback>
             </Form.Group>
     
             <Form.Group className="mb-3">
                 <Form.Label>Email <span className="req">*</span></Form.Label>
                 <Form.Control 
-                type="email" 
+                type="email"
+                required 
                 placeholder="Ingrese su email"
                 name="email" 
                 value={data.email}
                 onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el email
+                </Form.Control.Feedback>
             </Form.Group>
            
             <Form.Group className="mb-3">
                 <Form.Label>Password <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="password" 
+                required
                 placeholder="Ingrese su password"
                 name="password" 
                 value={data.password}
                 onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa un password para tu cuenta
+                </Form.Control.Feedback>
             </Form.Group>
             <div className="text-center">
             <button className="button-blue">Guardar</button>

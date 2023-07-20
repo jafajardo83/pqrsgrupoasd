@@ -27,6 +27,13 @@
       "lastName": "Cabrera",
       "email": "tutorias.ctf@kuepa.edu.co",
       "password": "qwerty789"
+    },
+    {
+      "id": "7894561230",
+      "firstName": "Jennifer",
+      "lastName": "Fajardo",
+      "email": "lrodriguez@gmail.com",
+      "password": "qwerty"
     }
   ],
   "pqrs": [
