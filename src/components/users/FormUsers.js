@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Container, Form } from "react-bootstrap";
+import { Container, Form,Row,Col } from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
 import NavBar from "../navBar/NavBar";
@@ -69,7 +69,7 @@ function FormUsers(){
         <div id="form-user">
         <h1 className="text-center mt-3">Datos Usuario</h1>
         <Form onSubmit={handleSubmit} noValidate validated={validated}>
-
+        <Row>
             <Form.Group className="mb-3">
                 <Form.Label>No. Documento <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -84,6 +84,7 @@ function FormUsers(){
                 </Form.Control.Feedback>
             </Form.Group>
             
+            <Col>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -99,20 +100,6 @@ function FormUsers(){
             </Form.Group>
             
             <Form.Group className="mb-3">
-                <Form.Label>Apellido <span className="req">*</span></Form.Label>
-                <Form.Control 
-                type="text" 
-                required
-                placeholder="Ingrese su apellido"
-                name="lastName" 
-                value={data.lastName}
-                onChange={handleChange}/> 
-                <Form.Control.Feedback type="invalid">
-                    Por favor ingresa el apellido.
-                </Form.Control.Feedback>
-            </Form.Group>
-    
-            <Form.Group className="mb-3">
                 <Form.Label>Email <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="email"
@@ -126,6 +113,22 @@ function FormUsers(){
                 </Form.Control.Feedback>
             </Form.Group>
            
+            </Col>
+            <Col>
+            <Form.Group className="mb-3">
+                <Form.Label>Apellido <span className="req">*</span></Form.Label>
+                <Form.Control 
+                type="text" 
+                required
+                placeholder="Ingrese su apellido"
+                name="lastName" 
+                value={data.lastName}
+                onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el apellido.
+                </Form.Control.Feedback>
+            </Form.Group>
+            
             <Form.Group className="mb-3">
                 <Form.Label>Password <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -139,6 +142,8 @@ function FormUsers(){
                     Por favor ingresa un password para tu cuenta
                 </Form.Control.Feedback>
             </Form.Group>
+            </Col>
+            </Row>
             <div className="text-center">
             <button className="button-blue">Guardar</button>
             </div>
