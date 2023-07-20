@@ -70,7 +70,7 @@ function FormPqrs(){
     //console.log(officers)
 
 
-    const [data,setData]=useState({id:generateUUID(),type:"",description:"",date:new Date(),state:"Pendiente",userId:""});
+    const [data,setData]=useState({id:generateUUID(),type:"",description:"",date:new Date(),state:"Pendiente",userId:sessionStorage.getItem('id')});
     /*2. Se usa la función handleChange para que cada vez que haya un cambio en el input
     guarde el name y el value del mismo */
         const handleChange=({target})=>{

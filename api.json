@@ -99,6 +99,24 @@
           "officer": "Sandra Rodriguez"
         }
       ]
+    },
+    {
+      "id": "6b65ed1d157b41b593fd4600c26fe79a",
+      "type": "Petición",
+      "description": "bla bla bla",
+      "date": "2023-07-20T18:30:46.359Z",
+      "state": "Pendiente",
+      "userId": "1",
+      "areas": [
+        {
+          "area": "Tecnología"
+        }
+      ],
+      "officers": [
+        {
+          "officer": "Sandra Rodriguez"
+        }
+      ]
     }
   ]
 }
