@@ -54,6 +54,7 @@
     max-width: 30%;
     max-height: 420px;
     height: 420px;
+    margin-top: 2rem;
 }
 .card-pars-title{
     color: var(--azulnegro);

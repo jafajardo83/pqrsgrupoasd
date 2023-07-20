@@ -28,6 +28,7 @@ function FormPqrs(){
     const [inputArea,setInputArea]=useState({area:""})
     const [officers,setInputOfficers]=useState([])
     const [inputOfficer,setInputOfficer]=useState({officer:""})
+    
 
     function changeHandle(e){
         e.preventDefault();
@@ -73,32 +74,47 @@ function FormPqrs(){
             officers
         })
     }
-   
-    const navigate=useNavigate();
+    
+    
+    
+    
     /*4. Crear petición asíncrona*/
     const url="http://localhost:5000/pqrs";  
-
+    const [validated, setValidated] = useState(false);
+    const navigate=useNavigate();
+    
     /*3. funci{on para procesar el envío del formulario*/
         const handleSubmit=async(e)=>{
-            e.preventDefault();
-            const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
-            console.log(response);
-            if (response.status === 201) {
-                
-                Swal.fire(
-                    'PQRS registrado!',
-                    `<strong> ${response.data.type} No. ${response.data.id}</strong> ha sido guardado exitosamente!`,
-                    'success'
-                )
-                navigate('/pqrs')
-                
-            }else {
-                Swal.fire(
-                    'Error!',
-                    'Hubo un problema al registrar el PQRS!',
-                    'error'
-                )
+           
+            const form = e.currentTarget;
+            if (form.checkValidity() === false) {
+                e.preventDefault();
+                e.stopPropagation();
             }
+            else{
+                e.preventDefault();
+                const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
+                console.log(response);
+                if (response.status === 201) {
+                    
+                    Swal.fire(
+                        'PQRS registrado!',
+                        `<strong> ${response.data.type} No. ${response.data.id}</strong> ha sido guardado exitosamente!`,
+                        'success'
+                    )
+                    navigate('/pqrs')
+                    
+                }else {
+                    Swal.fire(
+                        'Error!',
+                        'Hubo un problema al registrar el PQRS!',
+                        'error'
+                    )
+                }
+            }
+
+            setValidated(true);
+            
         }
         
 
@@ -109,19 +125,23 @@ function FormPqrs(){
         <Container>
         <div id="form-pqrs">
         <h1 className="text-center mt-3">Datos PQRS</h1>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} noValidate validated={validated}>
         <Form.Group className="mb-3">
             <Form.Label>Tipo de PQRS <span className="req">*</span></Form.Label>
             <Form.Select 
             name="type"
+            required
             onChange={handleChange}>
-                <option>Seleccione un Tipo de PQRS</option>
+                <option value="">Seleccione un Tipo de PQRS</option>
                 <option value="Petición">Petición</option>
                 <option value="Queja">Queja</option>
                 <option value="Reclamo">Reclamo</option>
                 <option value="Solicitud">Solicitud</option>
                 <option value="Otro">Otro</option>
             </Form.Select>
+            <Form.Control.Feedback type="invalid">
+              Por favor selecciona un tipo de PQRS
+            </Form.Control.Feedback>
             </Form.Group>
 
             <Row>
@@ -130,17 +150,27 @@ function FormPqrs(){
             
             <Form.Label>Área(s) <span className="req">*</span></Form.Label>
             <div className="d-flex flex-row">
+            <Form.Control.Feedback type="invalid">
+              Selecciona al menos un área para dirigir la solicitud
+            </Form.Control.Feedback>
             <Form.Select 
             name="area"
+            required
             onChange={changeHandle} >
-                <option>Seleccione un área para dirigir su solicitud</option>
+                <option value="">Seleccione un área para dirigir su solicitud</option>
                 <option value="Tecnología">Tecnología</option>
                 <option value="Soporte Técnico">Soporte Técnico</option>
                 <option value="Financiero">Financiero</option>
             </Form.Select>
             <button className="button-gray" type="button" onClick={changHandle}>Agregar</button>
             </div>
+            <Form.Control.Feedback type="invalid">
+              Selecciona al menos un área para dirigir la solicitud
+            </Form.Control.Feedback>
+            
+            
             <div>
+            
                 <table className="table-pqrs">
                     <tr>
                         <th>Áreas seleccionadas</th>
@@ -158,6 +188,7 @@ function FormPqrs(){
                     }
                 </table>
             </div>
+            
             </Form.Group>
             </Col>
             <Col>
@@ -166,8 +197,9 @@ function FormPqrs(){
             <div className="d-flex flex-row">
             <Form.Select 
             name="officer"
+            required
             onChange={changeFHandle}>
-                <option>Seleccione un funcionario para dirigir su solicitid</option>
+                <option value="">Seleccione un funcionario para dirigir su solicitid</option>
                 <option value="Sandra Rodriguez">Sandra Rodriguez</option>
                 <option value="Isaac Fisgativa">Isaac Fisgativa</option>
                 <option value="Manuel Pelaez">Manuel Pelaez</option>
@@ -193,6 +225,9 @@ function FormPqrs(){
                 }
             </table>
             </div>
+            <Form.Control.Feedback type="invalid">
+              Por favor selecciona al menos un funcionario para dirigir la solicitud
+            </Form.Control.Feedback>
             </Form.Group>
             </Col>
             </Row>
@@ -200,11 +235,15 @@ function FormPqrs(){
                 <Form.Label>Descripción <span className="req">*</span></Form.Label>
                 <Form.Control 
                 as="textarea" 
+                required
                 rows={3}
                 placeholder="Describa los detalles de su solicitud"
                 name="description" 
                 value={data.description}
                 onChange={handleChange}/> 
+            <Form.Control.Feedback type="invalid">
+              Por favor ingrese una descripción
+            </Form.Control.Feedback>
             </Form.Group>
             <div className="text-center">
                 <button className="button-blue" type="submit">Radicar PQRS</button>

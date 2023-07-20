@@ -79,10 +79,10 @@
       "userId": 1
     },
     {
-      "id": "f21474a2e9774000b999212dfdd7f5d2",
-      "type": "Petición",
+      "id": "93dd11b19f7c4d679f2d03a7de4a743d",
+      "type": "Solicitud",
       "description": "qwerty",
-      "date": "2023-07-20T06:59:36.348Z",
+      "date": "2023-07-20T15:48:25.607Z",
       "state": "Pendiente",
       "userId": "",
       "areas": [
@@ -97,10 +97,10 @@
       ]
     },
     {
-      "id": "d30b28cf3e914cd8a53edaf4734afd0a",
+      "id": "9cd223b6526a472abf95cbcfc7dfc243",
       "type": "Petición",
       "description": "qwerty",
-      "date": "2023-07-20T15:03:29.350Z",
+      "date": "2023-07-20T15:50:06.054Z",
       "state": "Pendiente",
       "userId": "",
       "areas": [
