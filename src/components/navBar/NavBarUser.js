@@ -19,7 +19,7 @@ function NavBarUser(){
             <nav>
                 <Link to="/home" className='menu-item'> Home </Link> 
                 <Link to="/pqrs" className="menu-item" >Ver mis PQRS</Link>
-                <Link to="/register/pqrs" className="menu-item" >Registrar PQRS</Link>
+                <Link to="/register-pqrs" className="menu-item" >Registrar PQRS</Link>
                 <hr className="menu-hr" noshade=""/>
                 <Link to="/login" className="menu-item">
                     <button className="btn-azul">

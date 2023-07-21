@@ -19,8 +19,10 @@ function Inicio() {
                         <p>Permítenos conocer todas tus Peticiones, Quejas, Reclamos y Sugerencias sobre nuestros servicios.</p>
                     </div>
                     <div className="info-text">
+                        <div className="info-text-title">
                         <h2>Tipos de ​P​QRS</h2>
                         <p>Por favor lee atentamente las descripciones de los tipos de PQRS y cuéntanos tu experiencia</p>
+                        </div>
                         <section id="boxes-pqrs">
                             <div className="box-pqrs">
                                 <div className="box-pqrs-img">

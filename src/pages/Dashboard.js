@@ -1,5 +1,6 @@
 import NavBarUser from "../components/navBar/NavBarUser";
 import { useEffect } from "react";
+import Pqrs from "./Pqrs";
 
 
 function Dashboard (){
@@ -14,7 +15,8 @@ function Dashboard (){
     },[])
     return(
     <>
-    <NavBarUser/>
+
+    <Pqrs/>
     </>
     );
 }

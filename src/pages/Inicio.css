@@ -11,7 +11,7 @@ padding: 1rem;
     margin: 0 auto;
     color: var(--negro);
     padding: 1rem;
-    width: 30%;
+    width: 80%;
     border-bottom:  solid var(--azuloscuro)
 }
 
@@ -26,7 +26,13 @@ padding: 1rem;
     margin: 1rem 0;
     flex-wrap: wrap;
 }
+.info-text-title{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto; 
+}
 .info-text{
+    width: 100%;
     text-align: center;
     margin: 0 auto; 
 }
@@ -62,3 +68,23 @@ padding: 1rem;
     border-bottom:  solid var(--azuloscuro)
 }
 
+  
+@media screen and (min-width: 768px){
+   
+}
+
+/*Punto de quiebre media querie notebook*/
+@media screen and (min-width: 1024px){
+    .info-title h1{
+        margin: 0 auto;
+        color: var(--negro);
+        padding: 1rem;
+        width: 30%;
+        border-bottom:  solid var(--azuloscuro)
+    }
+ }
+/*Punto de quiebre media querie desktop*/
+@media screen and (min-width: 1328px){
+   
+ }
+ 

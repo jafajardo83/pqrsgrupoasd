@@ -29,6 +29,7 @@ nav{
     position: absolute;
     z-index: 100;
     width: 100%;
+    visibility: hidden;
 }
 
 .menu-hr{
@@ -73,6 +74,9 @@ nav a:hover{
 
 /*Punto de quiebre media querie notebook*/
 @media screen and (min-width: 1024px){
+    nav{
+        visibility: visible;
+    }
     header{
         display: flex;
 		align-items: center;
@@ -86,7 +90,8 @@ nav a:hover{
         display: none;
     } 
     .logo img{
-        width: 85%;
+        max-width: 300px;
+        width: 100%;
     }
     .menu-hr{
         display: none;        

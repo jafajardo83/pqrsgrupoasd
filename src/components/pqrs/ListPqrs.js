@@ -97,7 +97,7 @@ function ListPqrs() {
         <div id="list-pqrs">
         <div className="title-user">
                 <h2>Peticiones Quejas Reclamos y Solicitudes</h2>
-                <Link to="/register/pqrs" className="menu-item">
+                <Link to="/register-pqrs" className="menu-item">
                     <button className="button-blue">
                         <i className="fa-solid fa-user"></i> Registrar PQRS
                     </button>

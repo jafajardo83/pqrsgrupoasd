@@ -97,7 +97,7 @@ function FormPqrs(){
         const handleSubmit=async(e)=>{
            
             const form = e.currentTarget;
-            if (form.checkValidity() === false) {
+            if (form.checkValidity() == false) {
                 e.preventDefault();
                 e.stopPropagation();
             }

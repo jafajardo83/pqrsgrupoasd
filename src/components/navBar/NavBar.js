@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
 function NavBar(){
+    function mostrarMenu(e){
+       e.preventDefault()
+    }
     return(
         <>
         <Container fluid/>
@@ -13,7 +16,7 @@ function NavBar(){
             <Link to="/home" className='menu-item'>
                 <img src={Logo} alt='Logo Sistema PQRS'/>
             </Link> 
-                <i className="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars" onclick={mostrarMenu}></i>
             </div>
             
             <nav>
