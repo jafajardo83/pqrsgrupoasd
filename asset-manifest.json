@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jafajardo83.github.io/pqrsgrupoasd/static/css/main.e477dcea.css",
+    "main.js": "/jafajardo83.github.io/pqrsgrupoasd/static/js/main.abb4c60f.js",
+    "static/media/map.jpg": "/jafajardo83.github.io/pqrsgrupoasd/static/media/map.80b040b8b1aa7d86cf8e.jpg",
+    "static/media/logo.svg": "/jafajardo83.github.io/pqrsgrupoasd/static/media/logo.a5737589bcb48adaae5dc082982fb3a0.svg",
+    "index.html": "/jafajardo83.github.io/pqrsgrupoasd/index.html",
+    "main.e477dcea.css.map": "/jafajardo83.github.io/pqrsgrupoasd/static/css/main.e477dcea.css.map",
+    "main.abb4c60f.js.map": "/jafajardo83.github.io/pqrsgrupoasd/static/js/main.abb4c60f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e477dcea.css",
+    "static/js/main.abb4c60f.js"
+  ]
+}
