@@ -29,7 +29,6 @@ nav{
     position: absolute;
     z-index: 100;
     width: 100%;
-    visibility: hidden;
 }
 
 .menu-hr{
