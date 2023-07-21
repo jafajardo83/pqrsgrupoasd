@@ -1,8 +1,7 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
-import { Card, Button } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Card} from 'react-bootstrap';
+
 import './Pqrs.css';
 
 function CardPqrs({ pqrs,setUplist,upList,handleClose,handleOpen,setDataModal }) {

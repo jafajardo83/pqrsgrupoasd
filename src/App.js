@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate, HashRouter } from 'react-router-dom';
+import { Route, Routes, HashRouter } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Pqrs from './pages/Pqrs';

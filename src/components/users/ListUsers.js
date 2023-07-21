@@ -1,6 +1,6 @@
 //import dobleroom from '../../img/doble-room.jpg';
 import { Link } from "react-router-dom";
-import {Button, Container} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CardUser from "./CardUser.js"

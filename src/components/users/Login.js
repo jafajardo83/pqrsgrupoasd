@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Container, Form,Row,Col } from "react-bootstrap";
+import { Container, Form} from "react-bootstrap";
 //import { useHistory } from "react-router";
 import Swal from 'sweetalert2'
 import NavBar from "../navBar/NavBar";
@@ -37,7 +37,7 @@ function Login() {
     /*3. funci{on para procesar el envío del formulario*/
         const handleSubmit=async(e)=>{
             const form = e.currentTarget;
-            if (form.checkValidity() === false) {
+            if (form.checkValidity() == false) {
                 e.preventDefault();
                 e.stopPropagation();
             }
@@ -54,7 +54,7 @@ function Login() {
                 }
                 else{
                     console.log(response.data[0].password)
-                    if(response.data[0].password===data.password){
+                    if(response.data[0].password==data.password){
                         Swal.fire(
                             'Bienvenido!',
                             `<strong> ${response.data[0].firstName} ${response.data[0].lastName}</strong>`,

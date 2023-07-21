@@ -36,21 +36,7 @@ function ListPqrs() {
     const [inputOfficer,setInputOfficer]=useState({officer:""})
     
 
-    function changeHandle(e){
-        e.preventDefault();
-        setInputArea({
-            ...inputArea,
-            [e.target.name]:e.target.value  
-        })        
-    }
-    
-    function changeFHandle(e){
-        e.preventDefault();
-        setInputOfficer({
-            ...inputOfficer,
-            [e.target.name]:e.target.value  
-        })
-    }
+   
     
     let{area}=inputArea
     let{officer}=inputOfficer
