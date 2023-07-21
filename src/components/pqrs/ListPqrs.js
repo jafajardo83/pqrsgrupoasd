@@ -103,6 +103,7 @@ function ListPqrs() {
         })
     },[upList])
     //console.log(list);
+    console.log(dataModal.areas)
     return(
         <>
         <NavBarUser/>
@@ -171,7 +172,7 @@ function ListPqrs() {
             name="area"
             required
             onChange={handleChangeModal} >
-                <option value="">Seleccione un área para dirigir su solicitud</option>
+               {/* <option value={dataModal.areas}>{dataModal.areas}</option>                <option value="Tecnología">Tecnología</option> */}
                 <option value="Tecnología">Tecnología</option>
                 <option value="Soporte Técnico">Soporte Técnico</option>
                 <option value="Financiero">Financiero</option>
@@ -186,9 +187,12 @@ function ListPqrs() {
             <div>
             
                 <table className="table-pqrs">
+                    <thead>
                     <tr>
                         <th>Áreas seleccionadas</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     {
                     show==true?
                        dataModal.areas.map(
@@ -203,6 +207,7 @@ function ListPqrs() {
                         :
                         <p1>No hay áreas agregadas a la solicitud</p1>
                     }
+                    </tbody>
                 </table>
             </div>
             
@@ -226,9 +231,12 @@ function ListPqrs() {
             </div>
             <div>
             <table className="table-pqrs">
+                <thead>
                 <tr>
                     <th>Funcionarios seleccionados</th>
                 </tr>
+                </thead>
+                <tbody>
                 {
                 show==true?
                     dataModal.officers.map(
@@ -243,6 +251,7 @@ function ListPqrs() {
                         :
                         <p1>No hay funcionarios agregados a esta solicitud</p1>
                 }
+                </tbody>
             </table>
             </div>
             <Form.Control.Feedback type="invalid">

@@ -17,30 +17,6 @@
   ],
   "pqrs": [
     {
-      "id": 2,
-      "type": "Queja",
-      "description": "Mal Servicio de Salud",
-      "date": "2023-07-12T20:42:43.535Z",
-      "areas": [
-        {
-          "area": "Administrativo"
-        },
-        {
-          "area": "Citas Médicas"
-        }
-      ],
-      "officers": [
-        {
-          "officer": "Sandra Rodriguez"
-        },
-        {
-          "officer": "Isaac Fisgativa"
-        }
-      ],
-      "state": "Pendiente",
-      "userId": 1
-    },
-    {
       "id": "93dd11b19f7c4d679f2d03a7de4a743d",
       "type": "Solicitud",
       "description": "qwerty",

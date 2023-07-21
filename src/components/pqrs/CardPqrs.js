@@ -83,8 +83,6 @@ function CardPqrs({ pqrs,setUplist,upList,handleClose,handleOpen,setDataModal })
                         <p><strong>Area(s):</strong> {pqrs.areas.map(a => a.area).join(' | ')}</p>
                         <p><strong>Funcionario(s):</strong> {pqrs.officers.map(o => o.officer).join(' | ')}</p>
                         <p><strong>Estado:</strong> {pqrs.state}</p>
-                        
-                        
                     </Card.Text>
                     <div className="text-center">
                         <button className="button-blue" onClick={handleEdit}><i className="fa-solid fa-pencil"></i> Editar</button>
