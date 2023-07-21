@@ -1,17 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Inicio from './pages/Inicio';
+import Pqrs from './pages/Pqrs';
+import Users from './pages/Users';
+import FormUsers from './components/users/FormUsers';
+import FormPqrs from './components/pqrs/FormPqrs';
+import Login from './components/users/Login';
+import Dashboard from './pages/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Inicio/>}></Route>
+    <Route path="/home" element={<Inicio/>}></Route>
+    
+    <Route path="/login" element={<Login/>}></Route>
+    <Route path="/dashboard" element={<Dashboard/>}></Route>
+    
+    <Route path="/users" element={<Users />}></Route>
+    <Route path="/register-user" element={<FormUsers/>}></Route>
+      
+    <Route path="/pqrs" element={<Pqrs/>}></Route>
+    <Route path="/register-pqrs" element={<FormPqrs/>}></Route>
+  </Routes>
+</BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
