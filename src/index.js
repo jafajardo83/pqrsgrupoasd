@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate, HashRouter } from 'react-router-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Inicio from './pages/Inicio';
@@ -13,7 +13,7 @@ import Dashboard from './pages/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<BrowserRouter>
+<HashRouter>
   <Routes>
     <Route path="/" element={<Inicio/>}></Route>
     <Route path="/home" element={<Inicio/>}></Route>
@@ -27,7 +27,7 @@ root.render(
     <Route path="/pqrs" element={<Pqrs/>}></Route>
     <Route path="/register-pqrs" element={<FormPqrs/>}></Route>
   </Routes>
-</BrowserRouter>
+</HashRouter>
 );
 
 
