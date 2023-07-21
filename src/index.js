@@ -25,7 +25,7 @@ root.render(
     <Route path="/register-user" element={<FormUsers/>}></Route>
       
     <Route path="/pqrs" element={<Pqrs/>}></Route>
-    <Route path="/register/pqrs" element={<FormPqrs/>}></Route>
+    <Route path="/register-pqrs" element={<FormPqrs/>}></Route>
   </Routes>
 </BrowserRouter>
 );

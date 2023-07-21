@@ -39,6 +39,7 @@
 
 .list-pqrs{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
@@ -51,9 +52,8 @@
     box-shadow: 0px 0px 5px #eaeaea;
     color: var(--negro);
     font-size: 1rem;
-    max-width: 30%;
-    max-height: 420px;
-    height: 420px;
+    max-width: 500px;
+    width: 100%;
     margin-top: 2rem;
 }
 .card-pars-title{
@@ -70,4 +70,32 @@
     cursor: pointer;
     margin: 1rem 0;
   }
+
+  
+@media screen and (min-width: 768px){
+   
+}
+
+/*Punto de quiebre media querie notebook*/
+@media screen and (min-width: 1024px){
+    .list-pqrs{
+        flex-direction:row;
+    
+    }
+    .card-pqrs{
+        max-width: 45%;
+        max-height: 420px;
+        height: 420px;
+        margin-top: 2rem;
+    }
+ }
+/*Punto de quiebre media querie desktop*/
+@media screen and (min-width: 1328px){
+    .card-pqrs{
+        max-width: 30%;
+        max-height: 420px;
+        height: 420px;
+        margin-top: 2rem;
+    }
+ }
  

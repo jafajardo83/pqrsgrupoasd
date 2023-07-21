@@ -84,7 +84,7 @@ function FormUsers(){
                 </Form.Control.Feedback>
             </Form.Group>
             
-            <Col>
+            <Col xs='12' lg='6'>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -114,7 +114,7 @@ function FormUsers(){
             </Form.Group>
            
             </Col>
-            <Col>
+            <Col xs='12' lg='6'>
             <Form.Group className="mb-3">
                 <Form.Label>Apellido <span className="req">*</span></Form.Label>
                 <Form.Control 

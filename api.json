@@ -17,30 +17,6 @@
   ],
   "pqrs": [
     {
-      "id": 1,
-      "type": "Peticion",
-      "description": "Petición de Cambio de Modem",
-      "date": "2023-07-14T20:42:43.535Z",
-      "areas": [
-        {
-          "area": "Tecnología"
-        },
-        {
-          "area": "Soporte Técnico"
-        }
-      ],
-      "officers": [
-        {
-          "officer": "Manuel Pelaez"
-        },
-        {
-          "officer": "Tatiana Cabrera"
-        }
-      ],
-      "state": "Pendiente",
-      "userId": 2
-    },
-    {
       "id": 2,
       "type": "Queja",
       "description": "Mal Servicio de Salud",
@@ -101,10 +77,10 @@
       ]
     },
     {
-      "id": "6b65ed1d157b41b593fd4600c26fe79a",
-      "type": "Petición",
-      "description": "bla bla bla",
-      "date": "2023-07-20T18:30:46.359Z",
+      "id": "d420cf913184426782e497e9c8224fe5",
+      "type": "Reclamo",
+      "description": "Prueba",
+      "date": "2023-07-21T11:39:26.426Z",
       "state": "Pendiente",
       "userId": "1",
       "areas": [
@@ -114,7 +90,7 @@
       ],
       "officers": [
         {
-          "officer": "Sandra Rodriguez"
+          "officer": "Isaac Fisgativa"
         }
       ]
     }
