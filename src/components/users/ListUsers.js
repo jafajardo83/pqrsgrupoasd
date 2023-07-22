@@ -10,7 +10,7 @@ import NavBar from "../navBar/NavBar.js";
 function ListUser() {
 
     /* 1. Definir url del API a la que me voy a conectar */
-    const url = "http://localhost:5000/users";
+    const url = "https://api-pqrs-tjzq.onrender.com/users";
     /*2.Generar fución asincrona*/
     const getData = async () => {
         const response = axios.get(url);
