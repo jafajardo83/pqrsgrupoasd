@@ -18,7 +18,7 @@ function NavBar(){
             </Link> 
             
                 <i className="fa-solid fa-bars" onClick={() => {
-                    console.log(show)
+                    //console.log(show)
                     setShow(!show);
                     }}></i>
               

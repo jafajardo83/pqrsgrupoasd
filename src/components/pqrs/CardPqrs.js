@@ -43,7 +43,7 @@ function CardPqrs({ pqrs,setUplist,upList,handleClose,handleOpen,setDataModal })
              if (result.isConfirmed) {
                  /*Eliminando de la BD */
                  axios.delete(`${url2}/${pqrs.id}`).then((response)=>{
-                 console.log(response);
+                 //console.log(response);
                  
                  /*Eliminando del estado */
                    if (response.status === 200) {

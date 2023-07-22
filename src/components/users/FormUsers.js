@@ -39,7 +39,7 @@ function FormUsers(){
             else{
                 e.preventDefault();
                 const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
-                console.log(response);
+                //console.log(response);
                 if (response.status === 201) {
                     
                     Swal.fire(
@@ -83,7 +83,8 @@ function FormUsers(){
                     Por favor ingresa el número de documento.
                 </Form.Control.Feedback>
             </Form.Group>
-            
+            </Row>
+            <Row> 
             <Col xs='12' lg='6'>
             <Form.Group className="mb-3">
                 <Form.Label>Nombre <span className="req">*</span></Form.Label>
@@ -98,23 +99,7 @@ function FormUsers(){
                     Por favor ingresa el nombre.
                 </Form.Control.Feedback>
             </Form.Group>
-            
-            <Form.Group className="mb-3">
-                <Form.Label>Email <span className="req">*</span></Form.Label>
-                <Form.Control 
-                type="email"
-                required 
-                placeholder="Ingrese su email"
-                name="email" 
-                value={data.email}
-                onChange={handleChange}/> 
-                <Form.Control.Feedback type="invalid">
-                    Por favor ingresa el email
-                </Form.Control.Feedback>
-            </Form.Group>
-           
-            </Col>
-            <Col xs='12' lg='6'>
+
             <Form.Group className="mb-3">
                 <Form.Label>Apellido <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -129,6 +114,24 @@ function FormUsers(){
                 </Form.Control.Feedback>
             </Form.Group>
             
+            </Col>
+            </Row>
+            <Row>
+            <Col xs='12' lg='6'>
+            <Form.Group className="mb-3">
+                <Form.Label>Email <span className="req">*</span></Form.Label>
+                <Form.Control 
+                type="email"
+                required 
+                placeholder="Ingrese su email"
+                name="email" 
+                value={data.email}
+                onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el email
+                </Form.Control.Feedback>
+            </Form.Group>
+
             <Form.Group className="mb-3">
                 <Form.Label>Password <span className="req">*</span></Form.Label>
                 <Form.Control 

@@ -16,7 +16,7 @@ function NavBarUser(){
             </Link> 
             
                 <i className="fa-solid fa-bars" onClick={() => {
-                    console.log(show)
+                    //console.log(show)
                     setShow(!show);
                     }}></i>
               
@@ -25,7 +25,7 @@ function NavBarUser(){
             <h1></h1>
             : 
             <nav>
-                <Link to="/home" className='menu-item'> Home </Link> 
+                <Link to="/dashboard" className='menu-item'> Home </Link> 
                 <Link to="/pqrs" className="menu-item" >Ver mis PQRS</Link>
                 <Link to="/register-pqrs" className="menu-item" >Registrar PQRS</Link>
                 <hr className="menu-hr" noshade=""/>

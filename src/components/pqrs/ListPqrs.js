@@ -64,7 +64,7 @@ function ListPqrs() {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         const response=await axios.put(`${url}/${dataModal.id}`,dataModal);
-        console.log(response);  
+        //console.log(response);  
         if(response.status===200){
             Swal.fire(
                 'Cambio Guardado!',
@@ -89,7 +89,7 @@ function ListPqrs() {
         })
     },[upList])
     //console.log(list);
-    console.log(dataModal.areas)
+    //console.log(dataModal.areas)
     return(
         <>
         <NavBarUser/>
