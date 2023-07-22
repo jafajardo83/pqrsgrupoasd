@@ -32,7 +32,6 @@ nav{
     position: absolute;
     z-index: 100;
     width: 100%;
-    visibility: visible;
 }
 
 .menu-hr{
@@ -78,12 +77,18 @@ nav a:hover{
 /*Punto de quiebre media querie notebook*/
 @media screen and (min-width: 1024px){
     
-    
-    header{
+    .desk{
+        display: block;
         display: flex;
+        flex-direction: row;
 		align-items: center;
         background-color: var(--azulnegro);
     }
+
+    .cel{
+        display: none;
+    }
+    
     .logo{
         flex-basis: 30%;
 	

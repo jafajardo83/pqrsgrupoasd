@@ -37,6 +37,7 @@ function NavBar(){
                 </Link>  
             </nav>}
         </header>
+        
         <header className="desk">
             <div className="logo">
             <Link to="/home" className='menu-item'>
