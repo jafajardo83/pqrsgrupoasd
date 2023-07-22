@@ -31,7 +31,7 @@ function Login() {
     }
 
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/users?email="+data.email;  
+    const url="https://api-pqrs-tjzq.onrender.com/users?email="+data.email;  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
