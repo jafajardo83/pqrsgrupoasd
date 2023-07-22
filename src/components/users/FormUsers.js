@@ -26,7 +26,7 @@ function FormUsers(){
     }
 
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/users";  
+    const url="https://api-pqrs-tjzq.onrender.com/users";  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
