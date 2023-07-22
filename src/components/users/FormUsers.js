@@ -85,8 +85,8 @@ function FormUsers(){
             </Form.Group>
             </Row>
             <Row> 
-            <Col xs='12' lg='6'>
-            <Form.Group className="mb-3">
+            <Col xs="12" lg="6">
+            <Form.Group className="mb-3" Col-xs="12" Col-lg="6">
                 <Form.Label>Nombre <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="text" 
@@ -99,7 +99,8 @@ function FormUsers(){
                     Por favor ingresa el nombre.
                 </Form.Control.Feedback>
             </Form.Group>
-
+            </Col>
+            <Col xs="12" lg="6">
             <Form.Group className="mb-3">
                 <Form.Label>Apellido <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -131,7 +132,8 @@ function FormUsers(){
                     Por favor ingresa el email
                 </Form.Control.Feedback>
             </Form.Group>
-
+            </Col>
+            <Col xs="12" lg="6">
             <Form.Group className="mb-3">
                 <Form.Label>Password <span className="req">*</span></Form.Label>
                 <Form.Control 
