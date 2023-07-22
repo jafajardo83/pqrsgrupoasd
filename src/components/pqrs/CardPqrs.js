@@ -24,7 +24,7 @@ function CardPqrs({ pqrs,setUplist,upList,handleClose,handleOpen,setDataModal })
     }
 
      /*1. Crear petición asíncrona*/
-     const url2="http://localhost:5000/pqrs"; 
+     const url2="https://api-pqrs-tjzq.onrender.com/pqrs"; 
 
      /*2. Función para borrar un registro a partir del evento botón eliminar*/
         const handleDelete=async()=>{
