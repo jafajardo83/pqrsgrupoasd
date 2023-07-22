@@ -89,7 +89,7 @@ function FormPqrs(){
     
     
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/pqrs";  
+    const url="https://api-pqrs-tjzq.onrender.com/pqrs";  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     
