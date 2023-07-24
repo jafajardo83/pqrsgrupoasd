@@ -9,7 +9,7 @@ function ListPqrs() {
 
     
     /*1. Definir url del api para traer PQRS del usuario autenticado */
-    const url="http://localhost:5000/pqrs?userId="+sessionStorage.getItem('id');
+    const url="https://api-pqrs-tjzq.onrender.com/pqrs?userId="+sessionStorage.getItem('id');
 
     /*2. Generar función asíncrona para conectar al endpoint */
     const getData=async()=>{
@@ -64,7 +64,7 @@ function ListPqrs() {
     const handleSubmit=async(e)=>{
         e.preventDefault();
         const response=await axios.put(`${url}/${dataModal.id}`,dataModal);
-        console.log(response);  
+        //console.log(response);  
         if(response.status===200){
             Swal.fire(
                 'Cambio Guardado!',
@@ -89,7 +89,7 @@ function ListPqrs() {
         })
     },[upList])
     //console.log(list);
-    console.log(dataModal.areas)
+    //console.log(dataModal.areas)
     return(
         <>
         <NavBarUser/>

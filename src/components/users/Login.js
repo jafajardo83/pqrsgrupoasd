@@ -31,7 +31,7 @@ function Login() {
     }
 
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/users?email="+data.email;  
+    const url="https://api-pqrs-tjzq.onrender.com/users?email="+data.email;  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
@@ -44,7 +44,7 @@ function Login() {
             else{
                 e.preventDefault();
                 const response=await axios.get(url,data);//await espera hasta que se ejcute la petición
-                console.log(response);
+                //console.log(response);
                 if(Object.keys==0){
                     Swal.fire(
                         'Error!',
@@ -53,7 +53,7 @@ function Login() {
                     )
                 }
                 else{
-                    console.log(response.data[0].password)
+                    //console.log(response.data[0].password)
                     if(response.data[0].password==data.password){
                         Swal.fire(
                             'Bienvenido!',

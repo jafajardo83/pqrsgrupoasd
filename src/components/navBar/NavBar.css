@@ -1,6 +1,9 @@
 /*-------------------------------------
 		Menu
 --------------------------------------*/
+.desk{
+    display: none;
+}
 .logo{
     background-color: var(--azulnegro);
     padding: 0rem 1rem;
@@ -73,14 +76,19 @@ nav a:hover{
 
 /*Punto de quiebre media querie notebook*/
 @media screen and (min-width: 1024px){
-    nav{
-        visibility: visible;
-    }
-    header{
+    
+    .desk{
+        display: block;
         display: flex;
+        flex-direction: row;
 		align-items: center;
         background-color: var(--azulnegro);
     }
+
+    .cel{
+        display: none;
+    }
+    
     .logo{
         flex-basis: 30%;
 	
@@ -101,7 +109,8 @@ nav a:hover{
         flex-direction: row;
         justify-content:flex-end;
 	   	background-color: transparent;
-        padding-right: 1rem;   
+        padding-right: 1rem;  
+        visibility: visible; 
     }
     nav a{
         color: var(--blanco);

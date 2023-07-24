@@ -89,7 +89,7 @@ function FormPqrs(){
     
     
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/pqrs";  
+    const url="https://api-pqrs-tjzq.onrender.com/pqrs";  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     
@@ -104,7 +104,7 @@ function FormPqrs(){
             else{
                 e.preventDefault();
                 const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
-                console.log(response);
+                //console.log(response);
                 if (response.status === 201) {
                     
                     Swal.fire(

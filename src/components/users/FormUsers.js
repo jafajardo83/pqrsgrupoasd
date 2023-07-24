@@ -26,7 +26,7 @@ function FormUsers(){
     }
 
     /*4. Crear petición asíncrona*/
-    const url="http://localhost:5000/users";  
+    const url="https://api-pqrs-tjzq.onrender.com/users";  
     const [validated, setValidated] = useState(false);
     const navigate=useNavigate();
     /*3. funci{on para procesar el envío del formulario*/
@@ -39,7 +39,7 @@ function FormUsers(){
             else{
                 e.preventDefault();
                 const response=await axios.post(url,data);//await espera hasta que se ejcute la petición
-                console.log(response);
+                //console.log(response);
                 if (response.status === 201) {
                     
                     Swal.fire(
@@ -83,9 +83,10 @@ function FormUsers(){
                     Por favor ingresa el número de documento.
                 </Form.Control.Feedback>
             </Form.Group>
-            
-            <Col xs='12' lg='6'>
-            <Form.Group className="mb-3">
+            </Row>
+            <Row> 
+            <Col xs="12" lg="6">
+            <Form.Group className="mb-3" Col-xs="12" Col-lg="6">
                 <Form.Label>Nombre <span className="req">*</span></Form.Label>
                 <Form.Control 
                 type="text" 
@@ -98,23 +99,8 @@ function FormUsers(){
                     Por favor ingresa el nombre.
                 </Form.Control.Feedback>
             </Form.Group>
-            
-            <Form.Group className="mb-3">
-                <Form.Label>Email <span className="req">*</span></Form.Label>
-                <Form.Control 
-                type="email"
-                required 
-                placeholder="Ingrese su email"
-                name="email" 
-                value={data.email}
-                onChange={handleChange}/> 
-                <Form.Control.Feedback type="invalid">
-                    Por favor ingresa el email
-                </Form.Control.Feedback>
-            </Form.Group>
-           
             </Col>
-            <Col xs='12' lg='6'>
+            <Col xs="12" lg="6">
             <Form.Group className="mb-3">
                 <Form.Label>Apellido <span className="req">*</span></Form.Label>
                 <Form.Control 
@@ -129,6 +115,25 @@ function FormUsers(){
                 </Form.Control.Feedback>
             </Form.Group>
             
+            </Col>
+            </Row>
+            <Row>
+            <Col xs='12' lg='6'>
+            <Form.Group className="mb-3">
+                <Form.Label>Email <span className="req">*</span></Form.Label>
+                <Form.Control 
+                type="email"
+                required 
+                placeholder="Ingrese su email"
+                name="email" 
+                value={data.email}
+                onChange={handleChange}/> 
+                <Form.Control.Feedback type="invalid">
+                    Por favor ingresa el email
+                </Form.Control.Feedback>
+            </Form.Group>
+            </Col>
+            <Col xs="12" lg="6">
             <Form.Group className="mb-3">
                 <Form.Label>Password <span className="req">*</span></Form.Label>
                 <Form.Control 
